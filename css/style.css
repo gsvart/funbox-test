@@ -324,14 +324,29 @@ main {
 
 /* === Стили состояний === */
 
+/* HOVERED */
+.card .card-inner:hover .card-content,
+.card .card-inner:hover .card-header__skewed-corner,
+.card .card-inner:hover .card-header__skewed-corner:after {
+  border-color: #2ea8e6;
+}
+
+.card-inner:hover .card__weight {
+  background: #2ea8e6;
+}
+/* HOVERED */
+
 /* DISABLED */
 .card-disabled .card-inner {
   cursor: unset;
 }
 
-.card-disabled .card-content,
-.card-disabled .card-header__skewed-corner,
-.card-disabled .card-header__skewed-corner:after {
+.card-disabled .card-inner .card-content,
+.card-disabled .card-inner:hover .card-content,
+.card-disabled .card-inner .card-header__skewed-corner,
+.card-disabled .card-inner:hover .card-header__skewed-corner,
+.card-disabled .card-inner .card-header__skewed-corner:after,
+.card-disabled .card-inner:hover .card-header__skewed-corner:after {
   border-color: #b3b3b3;
 }
 
@@ -341,7 +356,8 @@ main {
   color: #b3b3b3;
 }
 
-.card-disabled .card__weight {
+.card-disabled .card__weight,
+.card-disabled:hover .card__weight {
   background: #b3b3b3;
 }
 
@@ -353,12 +369,16 @@ main {
 
 /* SELECTED */
 .card-selected .card-content,
+.card-selected .card-inner:hover .card-content,
 .card-selected .card-header__skewed-corner,
-.card-selected .card-header__skewed-corner:after {
+.card-selected .card-inner:hover .card-header__skewed-corner,
+.card-selected .card-header__skewed-corner:after,
+.card-selected .card-inner:hover .card-header__skewed-corner:after {
   border-color: #d91667;
 }
 
-.card-selected .card__weight {
+.card-selected .card__weight,
+.card-selected .card-inner:hover .card__weight {
   background: #d91667;
 }
 /* SELECTED */
